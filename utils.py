@@ -22,3 +22,9 @@ def display_sub(lst,title,nrow,ncol):
         im = ax.imshow(lst[i], cmap='cool')
         ax.set_title("iteration "+str(i))
     plt.tight_layout()
+    
+def display_pic(name_picture,title):
+    image = plt.imread(name_picture)
+    plt.figure(num=title)
+    plt.imshow(image)
+    plt.axis('off')
