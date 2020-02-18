@@ -9,6 +9,14 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 def display_sub(lst,title,nrow,ncol):
+    """Display the subplots for the iterations from a list in a nrow x ncol grid.
+    
+    Keyword arguments:
+        lst -- list of the arrays to plot
+        title -- a string for the title of the main plot
+        nrow -- number of rows in the grid (integer)
+        ncol -- number of columns in the grid (integer)
+    """
     fig, axes = plt.subplots(nrow,ncol, num=title)
     for i, ax in enumerate(axes.ravel()):   
         im = ax.imshow(lst[i], cmap='cool')
