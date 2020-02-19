@@ -45,3 +45,16 @@ def anim_game(im_init,fct_update,frames_nb,title):
         return im,
     anim = animation.FuncAnimation(fig, animate,frames=frames_nb)
     return(anim)
+
+def plot_ten_iterations(grid,title,func):
+    iterations = [0] * 10
+    iterations[0] = grid
+    for i in range(1, 10):
+        iterations[i] = func(np.copy(iterations[i-1]))
+    display_sub(iterations, title, 2, 5)
+
+    
+### stable configs --------------
+first_config = np.zeros((50,50))
+inside = np.array([[1,1],[1,1]])
+first_config[35:37,35:37] = first_config[6:8,6:8] = first_config[25:27,25:27] = inside
