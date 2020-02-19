@@ -28,3 +28,8 @@ def display_pic(name_picture,title):
     plt.figure(num=title)
     plt.imshow(image)
     plt.axis('off')
+    
+def display_one_plot(array,title):
+    plt.figure(num=title)
+    plt.imshow(array)
+    plt.show()
