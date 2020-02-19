@@ -7,6 +7,7 @@ description: calculation and display functions
 """
 import matplotlib.pyplot as plt
 import numpy as np
+from matplotlib import animation
 
 def display_sub(lst,title,nrow,ncol):
     """Display the subplots for the iterations from a list in a nrow x ncol grid.
