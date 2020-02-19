@@ -34,3 +34,14 @@ def display_one_plot(array,title):
     plt.figure(num=title)
     plt.imshow(array)
     plt.show()
+    
+def anim_game(im_init,fct_update,frames_nb,title):
+    plt.figure(num=title)
+    fig = plt.gcf()
+    im = plt.imshow(im_init,cmap='cool')
+    plt.show()
+    def animate(frame):
+        im.set_data(fct_update(im_init))
+        return im,
+    anim = animation.FuncAnimation(fig, animate,frames=frames_nb)
+    return(anim)
