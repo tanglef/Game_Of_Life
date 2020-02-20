@@ -1,11 +1,10 @@
 # Conway's Game of life
-============================================
+
 
 Different implementations of Conway's Game of Life for the HMMA238 course.
 
 # The game
 ------------------------
-
 In order to compute this game, one must know the rules. Let n be the number of living cells in the 8 neighborhood of a cell.
 
 1. If n = 0 or n = 1 and the cell is alive: it dies of isolation,
@@ -20,7 +19,6 @@ With the code created we were able to provide an example of these rules right be
 
 # Implementations in this project
 -------------------------
-
 There are many ways to compute the game of life and one motivation for these versions is the computation speed. One hypothesis made for the main part is that the border of the grid will be considered dead.
 
 This project will tackle four ways to make the game:
@@ -33,6 +31,5 @@ Because the assumption of the dead border modifies the behavior of the patterns,
 
 # Remarks
 ------------------------
-
 A little more efficient way to make this game that wasn't computed in this project is using convolutions with scipy `signal` commands.
 
