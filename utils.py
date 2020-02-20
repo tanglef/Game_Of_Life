@@ -30,9 +30,9 @@ def display_pic(name_picture,title):
     plt.imshow(image)
     plt.axis('off')
     
-def display_one_plot(array,title):
+def display_one_plot(array,title, cmap='viridis'):
     plt.figure(num=title)
-    plt.imshow(array)
+    plt.imshow(array,cmap=cmap)
     plt.show()
     
 def anim_game(im_init,fct_update,frames_nb,title):
@@ -58,3 +58,19 @@ def plot_ten_iterations(grid,title,func):
 first_config = np.zeros((50,50))
 inside = np.array([[1,1],[1,1]])
 first_config[35:37,35:37] = first_config[6:8,6:8] = first_config[25:27,25:27] = inside
+
+second_config = np.zeros((50,50))
+stable_2 = np.array([[0,1,1,0],[1,0,0,1],[0,1,0,1],[0,0,1,0]])
+second_config[32:36,32:36] = second_config[6:10,6:10] = second_config[25:29,25:29] = stable_2
+
+stable_3 = np.array([[0,1,0],[1,0,1],[1,0,1],[0,1,0]])
+third_config = np.zeros((50,50))
+third_config[14:18,14:17] = third_config[6:10,6:9] = third_config[25:29,25:28] = stable_3
+
+### 2-periodic configs ------------
+inside_pattern = np.zeros((7,7))
+inside_pattern[0,2:5] = inside_pattern[-1,2:5] = inside_pattern[2:5,0] = inside_pattern[2:5,-1] = 1
+fourth_config = np.zeros((50,50))
+fourth_config[30:37,30:37] = fourth_config[2:9,2:9] = fourth_config[15:22,15:22] = inside_pattern
+
+
