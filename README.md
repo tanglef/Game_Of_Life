@@ -1,12 +1,12 @@
-# Game_Of_Life
+# Conway's Game of life
  Different implementations of Conway's Game of Life for the HMMA238 course.
 
 # The game
 
-In order to compute this game, one must know the rules. Let $n$ be the number of living cells in the $8$ neighborhood of a cell.
+In order to compute this game, one must know the rules. Let $n$ be the number of living cells in the <img src="https://render.githubusercontent.com/render/math?math=8"> neighborhood of a cell.
 <div class="alert alert-block alert-info">
 <ol type="1">
-  <li>If $n=0$ or $n=1$ and the cell is alive: it dies of isolation,</li>
+  <li>If <img src="https://render.githubusercontent.com/render/math?math=n=0"> or $n=1$ and the cell is alive: it dies of isolation,</li>
   <li>if $n=2$ or $n=3$ and the cell is alive: it stays alive,</li>
   <li>if $n=3$ and the cell is dead: it's born,</li>
    <li>if $n\geq 3$ and the cell is alive: it dies.</li>
