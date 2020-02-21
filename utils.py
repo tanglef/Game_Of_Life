@@ -25,7 +25,7 @@ def display_sub(lst,title,nrow,ncol):
     plt.tight_layout()
     
 def display_pic(name_picture,title):
-     """Display a saved picture using pyplot imread() function.
+    """Display a saved picture using pyplot imread() function.
     
     Keyword arguments:
         name_picture -- string for the path (or just name) of the picture
