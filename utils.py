@@ -25,17 +25,38 @@ def display_sub(lst,title,nrow,ncol):
     plt.tight_layout()
     
 def display_pic(name_picture,title):
+     """Display a saved picture using pyplot imread() function.
+    
+    Keyword arguments:
+        name_picture -- string for the path (or just name) of the picture
+        title -- a string for the title of the picture
+    """
     image = plt.imread(name_picture)
     plt.figure(num=title)
     plt.imshow(image)
     plt.axis('off')
     
 def display_one_plot(array,title, cmap='viridis'):
+    """Display a created plot from a numpy array (a heatmap).
+    
+    Keyword arguments:
+        array -- 2D numpy array to display
+        title -- a string for the title of the plot
+        cmap -- matplotlib usual cmap, viridis as default
+    """
     plt.figure(num=title)
     plt.imshow(array,cmap=cmap)
     plt.show()
     
 def anim_game(im_init,fct_update,frames_nb,title):
+    """Display the animation for the game from an initial grid.
+    
+    Keyword arguments:
+        im_init -- 2D numpy array (binary for the game of life)
+        fct_update -- the function which will update the data in the grid for each iteration
+        frames_nb -- int or iterable (or more : see matplotlib.animation.FuncAnimation help)
+        title -- a string for the title of the movie.
+    """
     plt.figure(num=title)
     fig = plt.gcf()
     im = plt.imshow(im_init,cmap='cool')
@@ -47,8 +68,15 @@ def anim_game(im_init,fct_update,frames_nb,title):
     return(anim)
 
 def plot_ten_iterations(grid,title,func):
-    iterations = [0] * 10
-    iterations[0] = grid
+    """Display the first ten iterations of a grid.
+    
+    Keyword arguments:
+        grid -- 2D numpy array to display (binary for the game of life)
+        title -- a string for the title of the plot
+        func -- a function that will update the data in the grid
+    """
+    iterations = [0] * 10  #initialize the stocking device
+    iterations[0] = grid 
     for i in range(1, 10):
         iterations[i] = func(np.copy(iterations[i-1]))
     display_sub(iterations, title, 2, 5)
