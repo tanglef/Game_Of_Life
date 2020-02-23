@@ -101,4 +101,20 @@ inside_pattern[0,2:5] = inside_pattern[-1,2:5] = inside_pattern[2:5,0] = inside_
 fourth_config = np.zeros((50,50))
 fourth_config[30:37,30:37] = fourth_config[2:9,2:9] = fourth_config[15:22,15:22] = inside_pattern
 
+def random_sq_mat_bernoulli(p, nrow, dead_border=True):
+    """Creates a random matrix of 0 and 1 in proportion p.
+    
+    Keyword arguments:
+        p -- float parameter of the bernoully's variable
+        nrow -- int number of rows (and columns) of the returned matrix
+        dead_border -- boolean whether the border of the matrix should be made of 0 or not
+    """
+    if dead_border:
+        inside = np.random.binomial(size=(nrow-2)*(nrow-2), n=1, p=p).reshape(nrow-2, nrow-2)
+        mat = np.zeros((nrow,nrow))
+        mat[1:-1, 1:-1] = inside
+    else:
+        mat = np.random.binomial(size=nrow*nrow, n=1, p=p).reshape(nrow, nrow)
+    return(mat)
+
 
