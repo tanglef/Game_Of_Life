@@ -14,8 +14,9 @@ In order to compute this game, one must know the rules. Let n be the number of l
 
 With the code created we were able to provide an example of these rules right below.
 
-![Visualization of the rules.](https://github.com/tanglef/Game_Of_Life/blob/master/pictures/before-after.png)
-
+| ![Visualization of the rules.](https://github.com/tanglef/Game_Of_Life/blob/master/pictures/before-after.png) | 
+|:--:| 
+| *Visualization of the game's rule: left side is before the iteration and right side is after.* |
 
 # Implementations in this project
 -------------------------
