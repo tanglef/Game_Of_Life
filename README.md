@@ -10,7 +10,7 @@ In order to compute this game, one must know the rules. Let n be the number of l
 1. If n = 0 or n = 1 and the cell is alive: it dies of isolation,
 2. if n = 2 or n = 3 and the cell is alive: it stays alive,
 3. if n = 3 and the cell is dead: it's born,
-4. if n > 2 and the cell is alive: it dies.
+4. if n > 3 and the cell is alive: it dies.
 
 With the code created we were able to provide an example of these rules right below.
 
