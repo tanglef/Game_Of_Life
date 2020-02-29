@@ -22,7 +22,7 @@ With the code created we were able to provide an example of these rules right be
 -------------------------
 There are many ways to compute the game of life and one motivation for these versions is the computation speed. One hypothesis made for the main part is that the border of the grid will be considered dead.
 
-This project will tackle four ways to make the game:
+This project will tackle three ways to make the game:
 
 * with python's lists,
 * with numpy arrays to vectorize some parts of the code,
